@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
 import Loader from "./Loader";
 import Paginate from "./Paginate";
 
@@ -28,7 +27,7 @@ const Giphy = () => {
       try {
         const results = await axios("https://api.giphy.com/v1/gifs/trending", {
           params: {
-            api_key: "tAEFUgagRjRNkU24orQdFB8EHMcNTUSe",
+            api_key: "ehWSD4Rm1rMgDz549p3FASrSnDhu1b3D",
             limit: 100,
           },
         });
@@ -45,7 +44,7 @@ const Giphy = () => {
 
     fetchData();
   }, []);
-
+  // stops ever loop
   const renderGifs = () => {
     if (isLoading) {
       return <Loader />;
@@ -70,7 +69,7 @@ const Giphy = () => {
       );
     }
   };
-
+  // error function
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
@@ -81,9 +80,9 @@ const Giphy = () => {
     setIsLoading(true);
 
     try {
-      const results = await axios("https://4api.giphy.com/v1/gifs/search", {
+      const results = await axios("https://api.giphy.com/v1/gifs/search", {
         params: {
-          api_key: "tAEFUgagRjRNkU24orQdFB8EHMcNTUSe",
+          api_key: "ehWSD4Rm1rMgDz549p3FASrSnDhu1b3D",
           q: search,
           limit: 100,
         },

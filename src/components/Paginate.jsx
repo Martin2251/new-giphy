@@ -6,6 +6,7 @@ const Paginate = (props) => {
   for (let i = 1; i <= Math.ceil(props.totalItems / props.itemsPerPage); i++) {
     pageNumbers.push(i);
   }
+  // rounds up is number is odd number
 
   return (
     <nav>
