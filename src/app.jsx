@@ -1,7 +1,8 @@
 import React from "react";
+import Giphy from "./components/Giphy";
 
 const App = () => {
-  return <div>App</div>;
+  return <div>Giphy</div>;
 };
 
 export default App;
